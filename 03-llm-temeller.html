@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Temelleri ve İleri Kavramlar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .slide {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .interactive-section {
+            background-color: #f0f8ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        #quizContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LLM Temelleri ve İleri Kavramlar</h1>
+
+    <div class="slide">
+        <h2>1. Temel Kavramlar</h2>
+        <button type="button" class="collapsible">Foundation Model</button>
+        <div class="content">
+            <p>Foundation Model, geniş ve çeşitli veri setleri üzerinde önceden eğitilmiş büyük ölçekli bir yapay zeka modelidir. Bu modeller, çeşitli görevlere uyarlanabilen genel amaçlı bir temel oluşturur.</p>
+        </div>
+
+        <button type="button" class="collapsible">Large Language Model (LLM)</button>
+        <div class="content">
+            <p>LLM, milyarlarca parametre içeren ve büyük miktarda metin verisi üzerinde eğitilmiş dil modelidir. Bu modeller, metin üretme, anlama ve çevirme gibi çeşitli görevleri gerçekleştirebilir.</p>
+        </div>
+
+        <button type="button" class="collapsible">Transformer Mimarisi</button>
+        <div class="content">
+            <p>Transformer, LLM'lerin temelini oluşturan bir sinir ağı mimarisidir. Öz-dikkat (self-attention) mekanizması sayesinde uzun mesafeli bağımlılıkları etkili bir şekilde işleyebilir.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>2. Prompt Engineering</h2>
+        <p>Prompt engineering, LLM'lerden istenen çıktıyı almak için giriş metnini (prompt) optimize etme sürecidir. Prompt mühendisleri, modelin daha doğru, alakalı ve kullanışlı yanıtlar vermesini sağlamak için çeşitli teknikler kullanırlar.</p>
+        
+        <h3>Prompt Engineering Teknikleri ve Örnekleri:</h3>
+        
+        <ol>
+            <li><strong>Rol Atama:</strong> LLM'ye belirli bir rol vererek daha odaklı yanıtlar alabilirsiniz.
+                <br>Örnek: "Bir tarih profesörü olarak, Fransız Devrimi'nin nedenleri hakkında kısa bir açıklama yap."</li>
+            
+            <li><strong>Adım Adım Talimatlar:</strong> Karmaşık görevler için, LLM'ye adım adım talimatlar vermek daha iyi sonuçlar sağlayabilir.
+                <br>Örnek: "Bir makale yazma sürecini açıkla. 1) Konu seçimi, 2) Araştırma yapma, 3) Taslak oluşturma, 4) Yazma, 5) Düzenleme adımlarını detaylandır."</li>
+            
+            <li><strong>Bağlam Sağlama:</strong> LLM'ye ek bağlam bilgisi vererek daha doğru ve alakalı yanıtlar alabilirsiniz.
+                <br>Örnek: "Yapay zeka etiği konusunda bir tartışma yapıyoruz. Bu bağlamda, yapay zekanın iş gücü üzerindeki potansiyel etkilerini açıkla."</li>
+            
+            <li><strong>Format Belirleme:</strong> İstenen çıktının formatını belirterek daha yapılandırılmış yanıtlar alabilirsiniz.
+                <br>Örnek: "Küresel ısınmanın etkilerini listele. Yanıtını şu formatta ver: 1. Etki: [açıklama], 2. Etki: [açıklama], ..."</li>
+            
+            <li><strong>Örnekle Gösterme (Few-shot learning):</strong> LLM'ye birkaç örnek vererek istediğiniz çıktı tarzını gösterebilirsiniz.
+                <br>Örnek: 
+                "Aşağıdaki gibi üç tekerleme daha üret:
+                1. Şu köşe yaz köşesi, şu köşe kış köşesi.
+                2. Bir berber bir berbere bre berber beri gel demiş.
+                3. ..."</li>
+        </ol>
+        
+        <p>Etkili prompt engineering, LLM'lerin potansiyelini maksimize etmek ve spesifik uygulamalar için optimize edilmiş çıktılar almak için kritik öneme sahiptir. İyi tasarlanmış promptlar, modelin daha doğru, alakalı ve kullanışlı yanıtlar üretmesini sağlar.</p>
+    </div>
+
+    <div class="slide">
+        <h2>3. RAG (Retrieval-Augmented Generation)</h2>
+        <p>RAG, LLM'lerin performansını artırmak için harici bilgi kaynaklarından ilgili bilgileri çeken ve bunları modelin çıktısına entegre eden bir tekniktir.</p>
+        
+        <button type="button" class="collapsible">RAG vs. Fine-tuning</button>
+        <div class="content">
+            <ul>
+                <li>RAG, modeli yeniden eğitmeden bilgi eklemeye olanak tanır.</li>
+                <li>Fine-tuning, modeli belirli bir göreve uyarlamak için tüm parametrelerini günceller.</li>
+                <li>RAG genellikle daha hızlı ve daha az hesaplama gücü gerektirir.</li>
+                <li>Fine-tuning, modelin belirli bir alanda daha derin öğrenmesini sağlar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>4. Diğer Önemli Kavramlar</h2>
+        <button type="button" class="collapsible">Token</button>
+        <div class="content">
+            <p>Tokenlar, LLM'lerin metni işlemek için kullandığı en küçük birimlerdir. Bir token, bir kelime veya kelimenin bir parçası olabilir.</p>
+        </div>
+
+        <button type="button" class="collapsible">Few-shot Learning</button>
+        <div class="content">
+            <p>Few-shot learning, LLM'lerin çok az örnek görerek yeni görevleri öğrenme yeteneğidir.</p>
+        </div>
+
+        <button type="button" class="collapsible">Hallucination</button>
+        <div class="content">
+            <p>Hallucination, LLM'lerin gerçekte var olmayan veya yanlış bilgileri üretme eğilimidir.</p>
+        </div>
+    </div>
+
+    <div class="interactive-section">
+        <h2>LLM Bilgi Testi</h2>
+        <div id="quizContainer">
+            <p id="question"></p>
+            <div id="choices"></div>
+            <button onclick="checkAnswer()">Cevabı Kontrol Et</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible sections
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        // Quiz functionality
+        const quizData = [
+            {
+                question: "LLM'lerin temelinde hangi mimari yatar?",
+                choices: ["CNN", "RNN", "Transformer", "GAN"],
+                correct: 2
+            },
+            {
+                question: "RAG tekniğinin açılımı nedir?",
+                choices: ["Random Access Generation", "Retrieval-Augmented Generation", "Rapid Adaptive Growth", "Recursive Algorithm Generation"],
+                correct: 1
+            },
+            {
+                question: "Hangi teknik, LLM'leri özel görevlere uyarlamak için kullanılır?",
+                choices: ["Tokenization", "Prompt Engineering", "Fine-tuning", "Embedding"],
+                correct: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            const question = quizData[currentQuestion];
+            document.getElementById("question").textContent = question.question;
+            const choicesHTML = question.choices.map((choice, index) => 
+                `<input type="radio" name="quiz" value="${index}" id="choice${index}">
+                 <label for="choice${index}">${choice}</label><br>`
+            ).join("");
+            document.getElementById("choices").innerHTML = choicesHTML;
+            document.getElementById("result").textContent = ""; // Clear previous result
+        }
+
+        function checkAnswer() {
+            const selected = document.querySelector('input[name="quiz"]:checked');
+            if (selected) {
+                const answer = parseInt(selected.value);
+                const question = quizData[currentQuestion];
+                if (answer === question.correct) {
+                    document.getElementById("result").textContent = "Doğru!";
+                } else {
+                    document.getElementById("result").textContent = "Yanlış. Doğru cevap: " + question.choices[question.correct];
+                }
+                currentQuestion = (currentQuestion + 1) % quizData.length;
+                if (currentQuestion === 0) {
+                    setTimeout(() => {
+                        alert("Tebrikler! Tüm soruları tamamladınız. Quiz yeniden başlayacak.");
+                        document.getElementById("result").textContent = "";
+                    }, 1000);
+                }
+                setTimeout(loadQuestion, 2000);
+            } else {
+                document.getElementById("result").textContent = "Lütfen bir cevap seçin.";
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
