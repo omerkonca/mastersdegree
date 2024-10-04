@@ -1,5 +1,5 @@
 # Important Links Discussed in Class
-
+ 
 ### 1. Attention is All You Need - Transformers Paper
 - [Attention is All You Need - Transformers Makale](https://arxiv.org/abs/1706.03762)
 - Description: The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. This paper introduces the Transformer architecture, which is based solely on attention mechanisms.
