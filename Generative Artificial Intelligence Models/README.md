@@ -1,28 +1,45 @@
-Yapay Zeka ve Derin Öğrenme Kaynakları
-Bu dosya, yapay zeka ve derin öğrenme konularında çeşitli kaynaklar ve araçlar hakkında bilgi içermektedir. Her kaynak, başlangıç seviyesinden ileri düzey teknik detaylara kadar farklı seviyelerde bilgi sunar.
+# Yapay Zeka ve Derin Öğrenme Kaynakları
 
-Kaynaklar
-1. Perceptron Örneği - Sefik Ilkin Serengil
-Bağlantı: A Step by Step Perceptron Example
-Açıklama: Tek katmanlı bir perceptronun nasıl çalıştığını anlatan adım adım bir kılavuz. Derin öğrenmeye giriş için temel bir anlayış sağlar.
-2. TensorFlow Tek Katmanlı Perceptron Örneği
-Bağlantı: GitHub'da Tek Katmanlı Perceptron Kodu
-Açıklama: TensorFlow kullanarak basit bir perceptron modeli oluşturmayı gösteren Python kodu.
-3. Neural Network Playground
-Bağlantı: TensorFlow Neural Network Playground
-Açıklama: Kendi sinir ağlarınızı tarayıcı üzerinden denemenizi sağlayan etkileşimli bir araç. Aktivasyon fonksiyonları, öğrenme oranları ve diğer hiperparametreleri test edebilirsiniz.
-4. CNN Explainer
-Bağlantı: CNN Explainer
-Açıklama: Konvolüsyonel Sinir Ağları (CNN) hakkında etkileşimli bir açıklayıcı. CNN yapısının nasıl çalıştığını anlamak için görsel bir araç sunar.
-5. Transformer Explainer
-Bağlantı: Transformer Explainer
-Açıklama: Transformer modelinin yapısını ve çalışma prensiplerini gösteren etkileşimli bir araç. Büyük dil modelleri gibi uygulamalarda kullanılan temel bileşenleri açıklıyor.
-6. Transformerları El ile Hesaplama
-Bağlantı: Transformerları El ile Hesaplama
-Açıklama: Encoder ve Decoder bölümlerinin ayrıntılı hesaplamaları ile transformer modelinin matematiğine derinlemesine bir giriş sağlar.
-7. Transformer Modellerinde Positional Encoding
-Bağlantı: A Gentle Introduction to Positional Encoding in Transformer Models, Part 1
-Açıklama: Transformer modellerinde pozisyon bilgilerini kodlamanın temel kavramlarını açıklayan bir makale. Python'da kendi positional encoder'ınızı nasıl yazabileceğinizi gösterir.
-8. Encoder ve Decoder LLM'leri Anlama
-Bağlantı: Understanding Encoder And Decoder LLMs
-Açıklama: Encoder ve decoder tipi büyük dil modelleri (LLM) arasındaki farkları ve kullanım amaçlarını detaylandıran bir makale.
+Bu doküman, yapay zeka, derin öğrenme ve doğal dil işleme konularında çeşitli kaynaklar sunmaktadır. Her bağlantı, konuya dair daha derin bir anlayış sağlamak için detaylandırılmıştır.
+
+## Görseller
+
+1. ![Yapay Zeka ve Derin Öğrenme Görseli](https://miro.medium.com/v2/resize:fit:1400/1*7PQo9SP47PCTibXV2FyGsw.png)
+   - Görsel, bir yapay zeka modelinin çalışma prensibini gösteren grafiksel bir temsil sunmaktadır.
+
+2. ![CNN Yapısı](https://miro.medium.com/v2/resize:fit:1400/0*IYeBGx90QcOfvX0w.png)
+   - Bu görsel, Konvolüsyonel Sinir Ağlarının (CNN) katman yapısını açıklamaktadır.
+
+## Eğitim Makaleleri
+
+### Tek Katmanlı Perceptron ve TensorFlow ile Uygulama
+- [A Step by Step Perceptron Example](https://sefiks.com/2020/01/04/a-step-by-step-perceptron-example/#google_vignette) - Sefik Ilkin Serengil
+  - Bu makale, tek katmanlı bir perceptronun nasıl çalıştığını anlatmaktadır. Derin öğrenmenin temelini anlamaya yardımcı olacak bir kılavuzdur.
+
+- [Tek Katmanlı Perceptron Kodu](https://github.com/serengil/tensorflow-101/blob/master/python/single-layer-perceptron.py) - GitHub
+  - TensorFlow kullanarak basit bir perceptron modeli oluşturmayı gösteren Python kodunu içerir.
+
+### Transformerlere Giriş ve Matematiksel Hesaplamalar
+- [Solving Transformer by Hand](https://levelup.gitconnected.com/understanding-transformers-from-start-to-end-a-step-by-step-math-example-16d4e64e6eb1) - Medium
+  - Bu kaynak, transformerlardaki encoder ve decoder bölümlerini matematiksel olarak ele almaktadır. Çeşitli matris çarpımları ile her adım detaylandırılmıştır.
+
+- [Positional Encoding in Transformers](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/) - Machine Learning Mastery
+  - Transformerlardaki pozisyonel kodlamanın nasıl çalıştığını anlatan bir rehber. Python ile kendi pozisyonel kodlayıcınızı nasıl yazabileceğinizi gösterir.
+
+- [Understanding Encoder and Decoder LLMs](https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder) - Sebastian Raschka
+  - Bu makale, dil modellerinde sıkça geçen "encoder" ve "decoder" terimlerini detaylı bir şekilde açıklamaktadır.
+
+## İnteraktif Araçlar
+
+- [TensorFlow Neural Network Playground](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.003&regularizationRate=0&noise=0&networkShape=3,3&seed=0.20538&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) - TensorFlow
+  - Tarayıcı üzerinden sinir ağı tasarlama ve çalıştırma imkanı sunan interaktif bir platform.
+
+- [CNN Explainer](https://poloclub.github.io/cnn-explainer/) - Poloclub
+  - Konvolüsyonel Sinir Ağları (CNN) hakkında görselleştirilmiş ve interaktif bir öğrenme aracı.
+
+- [Transformer Explainer](https://poloclub.github.io/transformer-explainer/) - Poloclub
+  - Transformer modelinin büyük dil modellerindeki işleyişini görsel olarak açıklayan interaktif bir araç.
+
+---
+
+Bu kaynaklar, yapay zeka ve derin öğrenme konularında çalışırken size yol gösterecektir.
